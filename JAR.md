@@ -78,7 +78,7 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	* Start address data should begin with "PK"  
 	* As empirically observed, the last address data should be "00" (NUL-byte)  
 	* As empirically observed, the final data must be an even number of NUL-bytes (for example, 2, 4, 6 or 8),  
-	![EOF NUL-bytes](./eof_empirical.png)
+	![EOF NUL-bytes](./img/eof_empirical.png)
 	
 	* Logically, last address must not contain unrelated to JAR data  
 	
