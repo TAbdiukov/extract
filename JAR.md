@@ -4,7 +4,7 @@
 
 The guide assumes that the JAR file exists in one piece, which is almost often the case. However, hypothetically, it can be split in its internal filesystem, especially if JAR file is not embedded from factory. However, such a case was never observed, and this would be a pretty complex behavior for low-power devices.  
 
-*Note: Guide assumes Windows as a main operating system*  
+*Note: Guide assumes Windows as a main operating system.*  
 
 # Prerequisites
 
@@ -16,7 +16,7 @@ The guide assumes that the JAR file exists in one piece, which is almost often t
 
 ## Getting started with CryptoChecker
 CryptoChecker is very simple to set up, but **CryptoChecker absolutely requires Windows**  
-1. Download the latest version [CryptoChecker](https://github.com/TAbdiukov/Reverse_CryptoChecker)
+1. Download the latest version of [CryptoChecker](https://github.com/TAbdiukov/Reverse_CryptoChecker)
 2. Extract the archive
 3. Using command-prompt, change directory to CryptoChecker
 4. Run, `cc (target_file)`
@@ -28,7 +28,7 @@ CryptoChecker is very simple to set up, but **CryptoChecker absolutely requires 
 
 These steps are required to set up binwalk as part of HexWalk, ([more info](https://github.com/gcarmix/HexWalk/#binwalk-on-windows-os)),
 1. Install latest Python
-2. Download HexWalk repository (`git clone` or Code -> [https://github.com/gcarmix/HexWalk/archive/refs/heads/main.zip](Download ZIP))
+2. Download HexWalk repository (`git clone` or Code -> [Download ZIP](https://github.com/gcarmix/HexWalk/archive/refs/heads/main.zip))
 3. Using command-prompt, change directory to repository's `binwalk_windows` and run `python setup.py install`
 4. Download [the latest HexWalk release](https://github.com/gcarmix/HexWalk/releases) for Windows
 5. Extract files to any directory.
@@ -66,7 +66,7 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	* JAR file ends before any other meaningful data, for example, before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) and (00)38B8BE (as detected by HexWalk, Unix path)
 	
 3. Typically phone store JAD files for JAR files, where JAD files in turn store JAR file size in plaintext. Let's try our chances. Search for `MIDlet-Jar-Size`. Luckily, an entry is found at 00370102: `MIDlet-Jar-Size: 32900`
-*Note: If **`MIDlet-Jar-Size`** is not present, then you will have to improvize! You can try over-assuming that JAR file up until "a whatever meaningful entry that follows the end position" or assuming that JAR file ends within 1 KB after End Header Signature. In this case, you will end up with a padded, but functional JAR file*.  
+*Note: If **`MIDlet-Jar-Size`** is not present, then you will have to improvize! You can try over-assuming that JAR file up until "a whatever meaningful entry that follows the end position" or assuming that JAR file ends within 1 KB (+`0x1000`) after End Header Signature. In this case, you will end up with a padded, but functional JAR file*.  
 4. Now calculate JAR file end position. Think about it, it should end at `Start position + length - 1`. -1 is required, so the resulting length matches. Hence we have, 
 	* 0038097F from step 2
 	* Decimal 32900 from step 3
