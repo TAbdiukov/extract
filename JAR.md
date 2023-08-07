@@ -43,6 +43,7 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 # Main guide
 
 1. Run the firmware file against several binary crypt-analysis tools. I used [CryptoChecker](https://github.com/TAbdiukov/Reverse_CryptoChecker) and [HexWalk](https://github.com/gcarmix/HexWalk/)
+
 2. Observe preliminary detected JAR/ZIP/PK archive(s) start and end position, as well as the position of a whatever meaningful entry that follows the end position (if present).
 
 	* CryptoChecker,
@@ -75,14 +76,16 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 5. If all is done correctly, the JAR file is from 0038097F to 0x00388A02
 6. Perform sanity checks to confirm the validity of your analysis. The following checks were devised,
 	* Start address data should begin with "PK"  
-	* As empirically observed, the last address data should be "00" (zero-byte)  
-	* As empirically observed, the final data must be an even number of zero-bytes (for example, 2, 4, 6 or 8)  
+	* As empirically observed, the last address data should be "00" (NUL-byte)  
+	* As empirically observed, the final data must be an even number of NUL-bytes (for example, 2, 4, 6 or 8),  
+	![EOF NUL-bytes](./eof_empirical.png)
+	
 	* Logically, last address must not contain unrelated to JAR data  
 	
 	In our case, we have,
 	* Data at 0038097F should begin with "PK - Yes
 	* Value at 0x388A02 is 00 - All good
-	* There are 4 zero-bytes toward the last address, starting at 0x3889FF - All good
+	* There are 4 NUL-bytes toward the last address, starting at 0x3889FF - All good
 	* 0x388A02 is after "End Header" at 003889ED  (according to both CryptoChecker and HexWalk) - Check
 	* 0x388A02 is before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) - Check
 	* 0x388A02 is before 0038B8BE (as detected by HexWalk, Unix path) - Check
