@@ -34,7 +34,7 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 5. Extract files to any directory.
 6. Run HexWalk
 
-### Analysing files with HexWalk
+### Analyzing files with HexWalk
 
 1. File -> Open -> (Select target file)
 2. Analysis -> Binary Analysis
@@ -66,8 +66,8 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	* JAR file ends somewhere after the "End Header" at 003889ED  (according to both CryptoChecker and HexWalk)  
 	* JAR file ends before any other meaningful data, for example, before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) and (00)38B8BE (as detected by HexWalk, Unix path)
 	
-3. Typically phone store JAD files for JAR files, where JAD files in turn store JAR file size in plaintext. Let's try our chances. Search for `MIDlet-Jar-Size`. Luckily, an entry is found at 00370102: `MIDlet-Jar-Size: 32900`
-*Note: If **`MIDlet-Jar-Size`** is not present, then you will have to improvize! You can try over-assuming that JAR file up until "a whatever meaningful entry that follows the end position" or assuming that JAR file ends within 1 KB (+`0x1000`) after End Header Signature. In this case, you will end up with a padded, but functional JAR file*.  
+3. Typically phone store JAD files for JAR files, where JAD files in turn store JAR file size in plaintext. Let's try our chances. Search for `MIDlet-Jar-Size`. Luckily, an entry is found at 00370102: `MIDlet-Jar-Size: 32900`  
+	*Note: If **`MIDlet-Jar-Size`** is not present, then you will have to improvise! You can try over-assuming that JAR file up until "a whatever meaningful entry that follows the end position" or assuming that JAR file ends within 1 KB (+`0x1000`) after End Header Signature. In this case, you will end up with a padded, but functional JAR file*.  
 4. Now calculate JAR file end position. Think about it, it should end at `Start position + length - 1`. -1 is required, so the resulting length matches. Hence we have, 
 	* 0038097F from step 2
 	* Decimal 32900 from step 3
@@ -83,9 +83,9 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	* Logically, last address must not contain unrelated to JAR data  
 	
 	In our case, we have,
-	* Data at 0038097F should begin with "PK - Yes
-	* Value at 0x388A02 is 00 - All good
-	* There are 4 NUL-bytes toward the last address, starting at 0x3889FF - All good
+	* Data at 0038097F should begin with "PK" header - Check
+	* Value at 0x388A02 is 00 - Check
+	* There are 4 NUL-bytes toward the last address (starting at 0x3889FF), 4 is an even number - Check
 	* 0x388A02 is after "End Header" at 003889ED  (according to both CryptoChecker and HexWalk) - Check
 	* 0x388A02 is before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) - Check
 	* 0x388A02 is before 0038B8BE (as detected by HexWalk, Unix path) - Check
