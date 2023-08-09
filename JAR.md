@@ -28,7 +28,7 @@ CryptoChecker is very simple to set up, but **CryptoChecker absolutely requires 
 
 These steps are required to set up binwalk as part of HexWalk, ([more info](https://github.com/gcarmix/HexWalk/#binwalk-on-windows-os)),
 1. Install latest Python
-2. Download HexWalk repository (`git clone` or Code -> [Download ZIP](https://github.com/gcarmix/HexWalk/archive/refs/heads/main.zip))
+2. Download HexWalk repository (`git clone` or Code → [Download ZIP](https://github.com/gcarmix/HexWalk/archive/refs/heads/main.zip))
 3. Using command-prompt, change directory to repository's `binwalk_windows` and run `python setup.py install`
 4. Download [the latest HexWalk release](https://github.com/gcarmix/HexWalk/releases) for Windows
 5. Extract files to any directory.
@@ -36,8 +36,8 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 
 ### Analyzing files with HexWalk
 
-1. File -> Open -> (Select target file)
-2. Analysis -> Binary Analysis
+1. File → Open → (Select target file)
+2. Analysis → Binary Analysis
 3. Observe results
 
 # Main guide
