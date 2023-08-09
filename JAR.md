@@ -10,7 +10,7 @@ The guide assumes that the JAR file exists in one piece, which is almost often t
 
 * Firmware/full-flash  
 * [7-zip](https://www.7-zip.org/download.html) – for sanity checks.
-* Trusty HEX editor with the ability to copy selections to new files. Such as WinHex
+* Trusty HEX editor with the ability to copy selections to new files. Such as WinHex.
 * Binary crypt-analysis tools. I recommend [CryptoChecker](https://github.com/TAbdiukov/Reverse_CryptoChecker) and [HexWalk](https://github.com/gcarmix/HexWalk/)  
 	* HexWalk can also be used as a HEX editor, but I never tried it 
 
@@ -63,7 +63,7 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	
 	Hence we conclude that,
 	* JAR file most likely starts at 0038097F (according to both CryptoChecker and HexWalk)  
-	* JAR file ends somewhere after the "End Header" at 003889ED  (according to both CryptoChecker and HexWalk)  
+	* JAR file ends somewhere after the "End Header" at 003889ED (according to both CryptoChecker and HexWalk)  
 	* JAR file ends before any other meaningful data, for example, before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) and (00)38B8BE (as detected by HexWalk, Unix path)
 	
 3. Typically phone store JAD files for JAR files, where JAD files in turn store JAR file size in plaintext. Let's try our chances. Search for `MIDlet-Jar-Size`. Luckily, an entry is found at 00370102: `MIDlet-Jar-Size: 32900`  
@@ -71,11 +71,11 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 4. Now calculate JAR file end position. Think about it, it should end at `Start position + length - 1`. -1 is required, so the resulting length matches. Hence we have, 
 	* 0038097F from step 2
 	* Decimal 32900 from step 3
-	* = hex(0x0038097F + 32900 -1) = 0x388A02  
+	* = hex(0x0038097F + 32900 - 1) = 0x388A02  
 	*Made sure to include -1!*
 5. If all is done correctly, the JAR file is from 0038097F to 0x00388A02
 6. Perform sanity checks to confirm the validity of your analysis. The following checks were devised,
-	* Start address data should begin with "PK"  
+	* Start address data should begin with `PK`...  
 	* As empirically observed, the last address data should be "00" (NUL-byte)  
 	* As empirically observed, the final data must be an even number of NUL-bytes (for example, 2, 4, 6 or 8),  
 	![EOF NUL-bytes](./img/eof_empirical.png)
@@ -86,7 +86,7 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	* Data at 0038097F should begin with "PK" header - Check
 	* Value at 0x388A02 is 00 - Check
 	* There are 4 NUL-bytes toward the last address (starting at 0x3889FF), 4 is an even number - Check
-	* 0x388A02 is after "End Header" at 003889ED  (according to both CryptoChecker and HexWalk) - Check
+	* 0x388A02 is after "End Header" at 003889ED (according to both CryptoChecker and HexWalk) - Check
 	* 0x388A02 is before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) - Check
 	* 0x388A02 is before 0038B8BE (as detected by HexWalk, Unix path) - Check
 	
