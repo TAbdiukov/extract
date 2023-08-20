@@ -1,4 +1,5 @@
 # extract
 File extraction guides.
 
-* [JAR](JAR.md)
+* [class (βeta)](class.md)  
+* [JAR](JAR.md)  
