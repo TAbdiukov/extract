@@ -6,4 +6,4 @@ File extraction guides.
 
 ## Product-specific guides
 
-* [PPT2Flash](PPT2Flash) *(media files extraction)*
+* [PPT2Flash](PPT2Flash.md) *(media files extraction)*
