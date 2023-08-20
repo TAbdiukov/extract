@@ -13,7 +13,7 @@ The guide is mainly based on the previous private research.
 
 ## Header
 
-**[Click here to jump to answer!](./class.md#footer)**
+**[Click here to jump to answer!](./class.md#conclusion)**
 
 ### Researching TrID
 
@@ -97,7 +97,7 @@ This ambiguity between Java class and Mach-O prompted a request for update of Tr
 * [replacement for java-class.trid.xml, exe-ub.trid.xml; CAFEBABE magic](https://mark0.net/forum/index.php?topic=801.0) (from August 24, 2020)
 
 
-### Overall conclusion
+### Conclusion
 
 If I take the liberty of saying that `XX` means (anything at all), then the .class file header must,  
 
