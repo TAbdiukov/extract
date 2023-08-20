@@ -13,6 +13,8 @@ The guide is mainly based on the previous private research.
 
 ## Header
 
+**[Click here to jump to answer!](./class.md#footer)**
+
 ### Researching TrID
 
 1. Download [TrIDNet + TrID XML Defs](https://mark0.net/soft-tridnet-e.html)  
