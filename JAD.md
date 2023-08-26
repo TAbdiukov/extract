@@ -65,7 +65,8 @@ Finding a .JAD is just a matter of finding any of these keywords and / or parame
  
 * JAD file contains many `0x0D 0x0A`, however, it always ends with `0D 0A`. 
  
-* These bytes correspond to... `\r\n` or `CRLF`, [(source)](https://stackoverflow.com/a/71531204/12258312). This combination of bytes is used in Windows, DOS, Symbian, and others as a newline character, [(source)](https://stackoverflow.com/a/1552782/12258312).
+* These bytes correspond to... `\r\n` or `CRLF`, [(source)](https://stackoverflow.com/a/71531204/12258312).
+  This combination of bytes is used in Windows, DOS, Symbian, and others as a newline character, [(source)](https://stackoverflow.com/a/1552782/12258312).  
  
  * Hence, you only need to find the last `CRLF` (HEX `0D 0A`), after which, there is no plaintext syntax of,  
 	```
