@@ -29,7 +29,7 @@ TC-BookReader-Logging: true
 
 # Extraction steps
 
-# Tools used
+## Tools used
 
 * Input BLOB file  
 * Trusty HEX editor with the ability to copy selections to new files. Such as WinHex.  
