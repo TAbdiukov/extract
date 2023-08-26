@@ -33,7 +33,7 @@ TC-BookReader-Logging: true
 
 * Input BLOB file  
 * Trusty HEX editor with the ability to copy selections to new files. Such as WinHex.  
-* [Notepad++](https://notepad-plus-plus.org) – to visually verify the .JAD file.
+* [Notepad++](https://notepad-plus-plus.org) – to visually verify the .JAD file.  
 
 ## Additional resources
 
@@ -72,11 +72,11 @@ Finding a .JAD is just a matter of finding any of these keywords and / or parame
 	Parameter: Value
 	```  
  
- This "locating" operation takes about 30 seconds.
+This "locate" operation takes about 30 seconds.
  
  # Step 3 – Locate JAD's beginning
  
- Very similar process to "Step 2 – Locating JAD's end"
+ Very similar process to "Step 2 – Locate JAD's end"
  
  you only need to find:
  * the first entry before the JAD's end
@@ -86,6 +86,8 @@ Finding a .JAD is just a matter of finding any of these keywords and / or parame
 	```  
 	
 Highly likely, this first entry with begin with the keyword `MIDlet`
+
+This second "locate" operation takes about 20 seconds.
 
 # Step 4 – Slice out into a file
 
