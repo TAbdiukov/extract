@@ -2,6 +2,7 @@
 File extraction guides.
 
 * [class (βeta)](class.md)  
+* [JAD](JAD.md) *(is boring)*  
 * [JAR](JAR.md)  
 
 ## Product-specific guides
