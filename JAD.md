@@ -55,7 +55,7 @@ JAD practically always contains parameter keyword `MIDlet`. Furthermore, it prac
 * **`MIDlet-Name`**
 * **`MIDlet-Version`**
 * **`MIDlet-Vendor`**
-* **`MIDlet-Jar-URL`**
+* **`MIDlet-Jar-URL`** *(URL often refers to the JAR filename)*
 * **`MIDlet-Jar-Size`**
 * **`MicroEdition-Profile`**
  
