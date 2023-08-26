@@ -10,7 +10,7 @@
 
 ## Trivia
 
-PPT2Flash ( [ppt2flash.jp](ppt2flash.jp) ) is a Japanese tool to convert a PowerPoint file into a SWF flash file.  
+PPT2Flash ( [ppt2flash.jp](https://www.ppt2flash.jp/) ) is a Japanese tool to convert a PowerPoint file into a SWF flash file.  
 
 In the process of conversion, the original PPT (PowerPoint) file is not stored as-is (verbatim). Instead, the PPT file contents (texts, media, images, videos) are extracted, transformed, and reassembled into a new presentation format, played by the PPT2Flash engine.
 
