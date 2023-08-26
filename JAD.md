@@ -35,7 +35,7 @@ TC-BookReader-Logging: true
 * Trusty HEX editor with the ability to copy selections to new files. Such as WinHex.  
 * [Notepad++](https://notepad-plus-plus.org) – to visually verify the .JAD file.  
 
-## Additional resources
+### Additional resources
 
 * [JAD specifications (JSR118)](http://download.oracle.com/otn-pub/jcp/midp-2.1-mrel-oth-JSpec/midp-2_1-mrel-spec.pdf)  
 
