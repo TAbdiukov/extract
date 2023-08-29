@@ -43,7 +43,7 @@ TC-BookReader-Logging: true
 
 Finding JAD is easy.
 
-JAD is entirely plaintext, encoded in simple ASCII (as opposed to Unicode). The structure is also basic, and is not even JSON.
+JAD is entirely plaintext, encoded in simple ASCII (as opposed to Unicode). The structure is also basic and is not even JSON.
 
 JAD follows the following basic structure:
 ```
