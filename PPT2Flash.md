@@ -27,7 +27,7 @@ In the process of conversion, the original PPT (PowerPoint) file is not stored a
 		```  
 		For example, `1.xml`.
 	* Expect to slice out some subordinate .SWF files!
-	* In general, you should slice out files: from the start address of **`[info-content 1]`** to the address **`[info-content 2] - 1`**. However, exceptions apply, and you will need to improvise!
+	* In general, you should slice out files: from the start address of **`[info-content 1]`** to the address of: **`[info-content 2] - 1`**. However, exceptions apply, and you will need to improvise!
 		- First, if according to the reports, you have the beginning of XML content at `nonsense characters <xml`, then of course we move the carriage to the place of the real beginning of the XML content
 		- Secondly, similarly, if you have, for example, content ending at `</xml>nonsense non-XML characters`, then again, move the carriage to the real end of the content.
 		- Third, if your **`[info-content 2]`** is clearly part of **`[info-content 1]`** (for example, if the detection is a false positive), then you need to skip **`[info-content 2]`** all the way to **`[info-content 3] - 1`** (assuming **`[info-content 3]`** is, again, not something that is clearly part of **`[info-content 1]`**. Of course, you can tweak and tune CryptoChecker (and HexWalk), but it's just easier to improvise.
