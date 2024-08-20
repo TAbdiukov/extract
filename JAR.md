@@ -1,10 +1,10 @@
 # How to extract JAR files
 
-[Nokia 3410 firmware](https://archive.org/download/munkikiscastles_1.03_1.06_fullflash/Nokia%203410%20%28NHM-2%29%20%28V04.26%29%20%28Munkiki%27s%20Castles%20v1.03%29.fls) was used for an example. However, the same steps can be performed on ANY unencrypted firmware, such as Alcatel or Siemens firmware.
+[Nokia 3410 firmware](https://archive.org/download/munkikiscastles_1.03_1.06_fullflash/Nokia%203410%20%28NHM-2%29%20%28V04.26%29%20%28Munkiki%27s%20Castles%20v1.03%29.fls) was used as an example. However, the same steps can be performed on ANY unencrypted firmware, such as Alcatel or Siemens firmware.
 
 The guide assumes that the JAR file exists in one piece, which is almost often the case. However, hypothetically, it can be split in its internal filesystem, especially if JAR file is not embedded from factory. However, such a case was never observed, and this would be a pretty complex behavior for low-power devices.  
 
-*Note: Guide assumes Windows as a main operating system.*  
+*Note: Guide assumes Windows as the main operating system.*  
 
 # Prerequisites
 
@@ -61,14 +61,14 @@ These steps are required to set up binwalk as part of HexWalk, ([more info](http
 	```
 	* *Note*: PKZip: End Header Signature/End of Zip archive is NOT the place where JAR file ends. It only signals that JAR file is ending!  
 	
-	Hence we conclude that,
+	Hence, we conclude that,
 	* JAR file most likely starts at 0038097F (according to both CryptoChecker and HexWalk)  
 	* JAR file ends somewhere after the "End Header" at 003889ED (according to both CryptoChecker and HexWalk)  
 	* JAR file ends before any other meaningful data, for example, before 0038A8D0 (as detected by CryptoChecker. Club Nokia URL) and (00)38B8BE (as detected by HexWalk, Unix path)
 	
-3. Typically phone store JAD files for JAR files, where JAD files in turn store JAR file size in plaintext. Let's try our chances. Search for `MIDlet-Jar-Size`. Luckily, an entry is found at 00370102: `MIDlet-Jar-Size: 32900`  
+3. Typically, the phone stores JAD files for JAR files, where JAD files in turn store JAR file size in plaintext. Let's try our chances. Search for `MIDlet-Jar-Size`. Luckily, an entry is found at 00370102: `MIDlet-Jar-Size: 32900`  
 	*Note: If **`MIDlet-Jar-Size`** is not present, then you will have to improvise! You can try over-assuming that JAR file up until "a whatever meaningful entry that follows the end position" or assuming that JAR file ends within 1 KB (+`0x1000`) after End Header Signature. In this case, you will end up with a padded, but functional JAR file*.  
-4. Now calculate JAR file end position. Think about it, it should end at `Start position + length - 1`. -1 is required, so the resulting length matches. Hence we have, 
+4. Now calculate JAR file end position. Think about it, it should end at `Start position + length - 1`. -1 is required, so the resulting length matches. Hence, we have, 
 	* 0038097F from step 2
 	* Decimal 32900 from step 3
 	* = hex(0x0038097F + 32900 - 1) = 0x388A02  

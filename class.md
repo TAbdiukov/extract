@@ -1,7 +1,7 @@
 # .class extraction
 *βeta version*
 
-The guide is mainly based on the previous private research.
+The guide is based on the previous private research.
 
 ## Tools used
 
@@ -25,7 +25,7 @@ The guide is mainly based on the previous private research.
 	![3e0b3ab507b2ccbf5879563001879b61.png](./_resources/3e0b3ab507b2ccbf5879563001879b61.png)
 6. Use TrIDNet against a known .class file. For example, against an example `KKM.class` . Observe successful detection of `Java Bytecode`,  
 	![47af67a56e88400c652f1717818ffc1d.png](./_resources/47af67a56e88400c652f1717818ffc1d.png)
-7. Double-click on the arrow on the left for more detailed result. Take note of the Def used, in this case, `\defs\j\java-class.trid.xml`  
+7. Double-click on the arrow on the left for a more detailed result. Take note of the Def used, in this case, `\defs\j\java-class.trid.xml`  
 	![edcf876d7a032049cd668dd6afb01cc4.png](./_resources/edcf876d7a032049cd668dd6afb01cc4.png)
 8. Examine `\defs\j\java-class.trid.xml`. We are only interested in the bits below.  
 	![0699035e48c2b9f21481cd93181380e1.png](./_resources/0699035e48c2b9f21481cd93181380e1.png)
@@ -85,7 +85,7 @@ In other words, (if we count from 1 in the post, and given the context): if the 
 * Less than 32, then it is a Mach-O header
 	* Therefore, Mach-O necessitates `00 00 00 XX` syntax
 * Greater or equal to 32, then it is a Java class header
-	* Since Java class's second-from-the-start set of 4 bytes has to be `00 XX 00 XX`, either the second byte has to be greater than 0, or the fourth byte has to be greater than 32,
+	* Since Java class's second-from-the-start set of 4 bytes must be `00 XX 00 XX`, either the second byte must be greater than 0, or the fourth byte must be greater than 32,
 * Anything else: invalid case
 
 ##### And even before 2022 – Aug 2020
@@ -109,8 +109,8 @@ If I take the liberty of saying that `XX` means (anything at all), then the .cla
 	```
 
 2. Satisfy at least one of the following conditions,  
-	i. Byte `0x05` has to be greater than 0,  
-	ii. Byte `0x07` has to be greater or equal to 32 (`0x20` ).  
+	i. Byte `0x05` must be greater than 0,  
+	ii. Byte `0x07` must be greater or equal to 32 (`0x20` ).  
 	
 ## Footer
 
