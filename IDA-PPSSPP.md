@@ -161,17 +161,17 @@ There are 2 options for this step: either to dump with PPSSPP (simpler, recommen
 
 #### Option 1: Dump with 🌐PPSSPP (simpler, recommended)
 
-1. In PPSSPP,  navigate to Debug → Memory view (<kbd>Ctrl + M</kbd>)
+1. In PPSSPP,  navigate to Debug → Memory view (<kbd>Ctrl + M</kbd>)  
 ![Screenshot 2025-10-13 063846.png](./_resources/Screenshot%202025-10-13%20063846.png)
-2. In "Memory Viewer" window, right-click in  the memory area and select "Dump"
+2. In "Memory Viewer" window, right-click in  the memory area and select "Dump"  
 ![Screenshot 2025-10-13 065549.png](./_resources/Screenshot%202025-10-13%20065549.png)
-3. Ensure that "Location" selected is "RAM". 
+3. Ensure that "Location" selected is "RAM".  
 ![Screenshot 2025-10-13 065743.png](./_resources/Screenshot%202025-10-13%20065743.png)
-4. Click on `...` and ensure to save the dump at a good location with a meaningful name (such as `Tutorial`). Then, click "OK"
+4. Click on `...` and ensure to save the dump at a good location with a meaningful name (such as `Tutorial`). Then, click "OK"  
 ![Screenshot 2025-10-13 070214.png](./_resources/Screenshot%202025-10-13%20070214.png)'
-5. Take a note of pre-set Start (`0x08800000`) and Size (`0x01800000`). Finally, in "Dump memory" window, click "OK"
+5. Take a note of pre-set Start (`0x08800000`) and Size (`0x01800000`). Finally, in "Dump memory" window, click "OK"  
 ![Screenshot 2025-10-13 070046.png](./_resources/Screenshot%202025-10-13%20070046.png)
-6. Observe success
+6. Observe success  
 '![Screenshot 2025-10-13 072523.png](./_resources/Screenshot%202025-10-13%20072523.png)
 
 **Do NOT close PPSSPP yet, do not unpause the game in debugger**
