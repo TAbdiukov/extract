@@ -193,13 +193,13 @@ Once the breakpoint is hit, do
 4. Click "✅OK",
 ![51ee50b1fc8f3a282d393f8ea77a7efc.png](./_resources/51ee50b1fc8f3a282d393f8ea77a7efc.png)
 
-5. Once "Search process ( Step 1 )" is complete, click another "✅OK". Observe "all possible" and "Filter until the number..." tips being printed at the bottom of the ArtMoney main window,
+5. Once "Search process ( Step 1 )" is complete, click another "✅OK". Observe "all possible" and "Filter until the number..." tips being printed at the bottom of the ArtMoney main window,  
 ![f3112a19582d88c0293627c7b9c8c694.png](./_resources/f3112a19582d88c0293627c7b9c8c694.png)
 
-6. Right-click on the **left** side of ArtMoney main window's white space - Click "Save the filtration"
+6. Right-click on the **left** side of ArtMoney main window's white space - Click "Save the filtration"  
 ![29fb63d25b9272b6ee5596168f940df1.png](./_resources/29fb63d25b9272b6ee5596168f940df1.png)
 
-7. Give it a meaningful name, e.g., "Tutorial", then click "Save"
+7. Give it a meaningful name, e.g., "Tutorial", then click "Save"  
 ![c97c5f504de417e16fbfddfacaf918d8.png](./_resources/c97c5f504de417e16fbfddfacaf918d8.png)
 
 **Do NOT close PPSSPP yet, do not unpause the game in debugger**
@@ -241,7 +241,8 @@ Old (generic) | New (correct and precise)
 Do you want to change the processor type to psp? → [ Yes ]
 
 ### 6.3 Disassembly memory organization
-![dd23dd197f1cbfcd8de635013aa72f70.png](./_resources/dd23dd197f1cbfcd8de635013aa72f70.png)
+![dd23dd197f1cbfcd8de635013aa72f70.png](./_resources/dd23dd197f1cbfcd8de635013aa72f70.png) |
+---- |
 (very important not to make any mistakes)
 
 The following information was used for reference:
