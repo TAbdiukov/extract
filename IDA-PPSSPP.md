@@ -403,7 +403,7 @@ The result (I added some labels and used decimal constants)
 
 ![001e58b8f6bf3582335092d6192845bc.png](./_resources/001e58b8f6bf3582335092d6192845bc.png)
 
-## Bonus steps: Load IDA Pro analysis to ChatGPT
+## Bonus steps: Utilize ChatGPT to accelerate your IDA Pro analysis
 *paid ChatGPT may be required*
 
 1. In IDA Pro may produce a C-file for analysis by accessing File -> Produce file -> Create C file (or <kbd>Ctrl+F5</kbd>). Give it a meaningful name, e.g., `ppsspp-ram-game-[title-identifier]-[version].c`   
@@ -425,7 +425,7 @@ The result (I added some labels and used decimal constants)
 
 5. (Optional) source of generate a cover picture for custom GPT.
 
-6. Do create a custom GPT and enjoy having an AI analysing the RAM of a PSP game.
+6. Do create a custom GPT and enjoy having an AI capable of data-analysing the RAM of a PSP game.
 
 ## Troubleshooting appendix
 
