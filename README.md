@@ -14,4 +14,4 @@ File extraction guides.
 ## Product-specific guides
 
 * [PPT2Flash](PPT2Flash.md) *(media files extraction)* 
-* [Analysing PPSSPP RAM with IDA Pro](IDA-PPSSPP.md) *(with bonus steps on potentially accelerating your analysis with ChatGPT)*
+* [Analysing PPSSPP RAM with IDA Pro](IDA-PPSSPP.md) *(with a bonus part on accelerating your analysis with ChatGPT)*
