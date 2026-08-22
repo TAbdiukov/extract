@@ -418,7 +418,7 @@ The result (I added some labels and used decimal constants)
     - Within "Capabilities", untick "Web Search" and "Image Generate", and do tick "Code Interpreter & Data Analysis"
 
 4. In "Upload files", upload the C file of `ppsspp-ram-game-[title-identifier]-[version].c`  from step 1,  
-![c89d438a5ec4e6a2e365fda45b2edfa4.png](../_resources/c89d438a5ec4e6a2e365fda45b2edfa4.png)
+![c89d438a5ec4e6a2e365fda45b2edfa4.png](./_resources/c89d438a5ec4e6a2e365fda45b2edfa4.png)
 *Tip*: Long C files may not be accepted by ChatGPT. There are 2 ways to make ChatGPT accept a long C file.
 * Option 1 (more effective): simply zip the C file into a .zip file with normal compression. For example, you can use [7-zip](https://www.7-zip.org/) for this. ChatGPT can recognize .ZIP files and unzip them easily (unlike more advanced compression format)
 * Option 2: Minify C file.
