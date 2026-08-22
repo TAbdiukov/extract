@@ -412,7 +412,7 @@ The result (I added some labels and used decimal constants)
 2. Browse to https://chatgpt.com/gpts , click the Create button (top-right corner)  
 ![40e32718f3a0a439ba0a948f419fd82b.png](./_resources/40e32718f3a0a439ba0a948f419fd82b.png)
 
-3. Configure:  
+3. Configure,  
 	![fda6d92084e16061541ebab4708ff2d5.png](./_resources/fda6d92084e16061541ebab4708ff2d5.png)
 	- Within "Recommended Model", select the latest available "Pro" model.
     - Within "Capabilities", untick "Web Search" and "Image Generate", and do tick "Code Interpreter & Data Analysis"
